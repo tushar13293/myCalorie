@@ -8,6 +8,8 @@ public class bmrCalculator : MonoBehaviour {
 	public Slider AgeSlider;
 	public Slider WeightSlider;
 	public Slider HeightSlider;
+    public Dropdown GenderDropdown;
+
 	public Text bmrText;
 
 
@@ -18,8 +20,10 @@ public class bmrCalculator : MonoBehaviour {
         Debug.Log(AgeSlider.value);
         Debug.Log(WeightSlider.value);
         Debug.Log(HeightSlider.value);
+        Debug.Log(GenderDropdown.value);
+        
 
-        double a = (10 * WeightSlider.value) + (6.25 * HeightSlider.value) - (5 * AgeSlider.value) + 5;
+        double a = ((10 * WeightSlider.value) + (6.25 * HeightSlider.value) - (5 * AgeSlider.value) + 5) * 1.2;
         Debug.Log(a);
 
         bmrText.text = "Your BMR index is : " + a.ToString() + " Calories/Day";
