@@ -2,27 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class KitchenMenuTrigger : MonoBehaviour {
 
 	Collider2D m_ObjectCollider;
+    public Image Popup;
+    public Text KitchenPopupText;
+    public Text GymPopupText;
 
     void Start()
     {
-        //Fetch the GameObject's Collider (make sure they have a Collider component)
         m_ObjectCollider = GetComponent<Collider2D>();
-        //Here the GameObject's Collider is not a trigger
-        m_ObjectCollider.isTrigger = false;
-        //Output whether the Collider is a trigger type Collider or not
+        Popup.enabled = false;
+        KitchenPopupText.enabled = false;
+        GymPopupText.enabled = false;
         Debug.Log("Trigger On : " + m_ObjectCollider.isTrigger);
+    }
+
+    void Update() {
+        if (Input.GetKeyDown("k"))
+        {
+            SceneManager.LoadScene ("KitchenSceneMenu");
+        }
     }
 
     void OnTriggerEnter2D()
     {
         //GameObject's Collider is now a trigger Collider when the GameObject is clicked. It now acts as a trigger
         m_ObjectCollider.isTrigger = true;
-        SceneManager.LoadScene ("KitchenSceneMenu");
-        //Output to console the GameObject’s trigger state
+        Debug.Log(Popup.enabled);
+        Popup.enabled = true;
+        KitchenPopupText.enabled = true;
+    }
+
+    void OnTriggerExit2D()
+    {
+        Popup.enabled = false;
+        KitchenPopupText.enabled = false;
         Debug.Log("Fridge");
     }
 

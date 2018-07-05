@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class InfoPanelSliderValues : MonoBehaviour {
 
-	Text ageSliderValue;
+	Text SliderValue;
 
 	void Start () {
-		ageSliderValue = GetComponent<Text> ();
+		SliderValue = GetComponent<Text> ();
 	}
 
 	public void valueUpdate (float value){
-		ageSliderValue.text = Mathf.RoundToInt(value).ToString();
+		SliderValue.text = Mathf.RoundToInt(value).ToString();
 	}
 
 }
