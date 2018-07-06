@@ -25,12 +25,14 @@ public class BedroomMenuTrigger : MonoBehaviour {
         Debug.Log("Trigger On : " + m_ObjectCollider.isTrigger);
     }
 
+    
+
     void Update() {
         if (Input.GetKeyDown("s"))
         {
             caloriesBurntWhileSleeping = caloriesBurntWhileSleeping + 500;
             //Debug.Log(CalorieScore.calories);
-            SceneManager.LoadScene ("weightlostScene");
+            SceneManager.LoadScene ("BedroomScene");
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -90,6 +91,13 @@ public class StreamVideo : MonoBehaviour {
         }
 
         Debug.Log("Done Playing Video");
+        SceneManager.LoadScene ("weightlostScene");
+
+        // void openMainScene() {
+        //     SceneManager.LoadScene ("weightlostScene");
+        //     //Debug.Log("invoke");
+        // }
+
     }
 
     // Update is called once per frame

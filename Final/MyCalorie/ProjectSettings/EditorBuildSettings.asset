@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/weightlostScene.unity
     guid: 0330877e7fb39244985ca2f7c9a8a74c
+  - enabled: 1
+    path: Assets/Scenes/BedroomScene.unity
+    guid: d0a6946fa66fafd42bf57ae7fcd1f66a
   m_configObjects: {}
