@@ -10,6 +10,7 @@ public class GymMenuTrigger : MonoBehaviour {
     public Image Popup;
     public Text KitchenPopupText;
     public Text GymPopupText;
+    public Text BedroomPopupText;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class GymMenuTrigger : MonoBehaviour {
         Popup.enabled = false;
         KitchenPopupText.enabled = false;
         GymPopupText.enabled = false;
+        BedroomPopupText.enabled = false;
         Debug.Log("Trigger On : " + m_ObjectCollider.isTrigger);
     }
 

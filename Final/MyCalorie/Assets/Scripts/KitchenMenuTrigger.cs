@@ -11,13 +11,14 @@ public class KitchenMenuTrigger : MonoBehaviour {
     public Image Popup;
     public Text KitchenPopupText;
     public Text GymPopupText;
-
+    public Text BedroomPopupText;
     void Start()
     {
         m_ObjectCollider = GetComponent<Collider2D>();
         Popup.enabled = false;
         KitchenPopupText.enabled = false;
         GymPopupText.enabled = false;
+        BedroomPopupText.enabled = false;
         Debug.Log("Trigger On : " + m_ObjectCollider.isTrigger);
     }
 

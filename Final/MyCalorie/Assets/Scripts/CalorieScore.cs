@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CalorieScore : MonoBehaviour {
 
 	public Text calorieText;
-	public static int totalCalorieTaken = 0;
+	public static double calories = 0;
 	public Slider energyBar;
 	public static int energyBarValue = 20;
 	//public static int ;
@@ -18,6 +18,7 @@ public class CalorieScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		calorieText.text = "Calories: " + (bmrCalculator.calorieScore - CalorieIntake.totalCalorieTaken + CalorieIntake.totalCalorieBurnt).ToString();
+		calories = bmrCalculator.calorieScore - CalorieIntake.totalCalorieTaken + CalorieIntake.totalCalorieBurnt + BedroomMenuTrigger.caloriesBurntWhileSleeping;
+		calorieText.text = "Calories: " + (bmrCalculator.calorieScore - CalorieIntake.totalCalorieTaken + CalorieIntake.totalCalorieBurnt + BedroomMenuTrigger.caloriesBurntWhileSleeping).ToString();
 	}
 }

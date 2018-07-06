@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GymSceneMenu.unity
     guid: 1f7d3419d361ed442a987089f0cbf537
+  - enabled: 1
+    path: Assets/Scenes/weightlostScene.unity
+    guid: 0330877e7fb39244985ca2f7c9a8a74c
   m_configObjects: {}
